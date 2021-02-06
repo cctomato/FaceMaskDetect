@@ -1,15 +1,15 @@
 # FaceMaskDetect
 基于yolov5的人脸口罩检测  
-Face mask detect based on yolov5
+
+English (README_en.md)
 
 ## 介绍 - Introduction
-我们基于docker部署pytorch的训练和运行环境，借助yolov5检测算法实现人脸口罩的检测，并通过nvidia-cuda技术进行加速。
+基于docker部署pytorch的训练和运行环境，借助yolov5检测算法实现人脸口罩的检测，并通过nvidia-cuda技术进行加速。
 
 ## 用法 - Usage
 我是在Ubuntu 20x系统上使用。
 ### 1 安装nvidia驱动
-
-在ubuntn上只需要执行以下命令就可以自动安装N卡驱动。
+在ubuntu上只需要执行以下命令就可以自动安装N卡驱动。
 ```bash
 $ ubuntu-drivers autoinstall
 ```
@@ -49,9 +49,13 @@ $ systemctl daemon-reload
 $ systemctl restart docker
 ```
 ### 4 构建pytorch环境
-clone仓库中的代码，然后下载torch-1.7.1+cu110-cp37-cp37m-linux_x86_64.whl、torchaudio-0.7.2-cp37-cp37m-linux_x86_64.whl
-、torchvision-0.8.2+cu110-cp37-cp37m-linux_x86_64.whl、Anaconda3-5.3.0-Linux-x86_64.sh这四个文件放在项目根目录，目的是加快环境构建。
-torch相关文件可以在[此处下载](https://download.pytorch.org/whl/torch_stable.html)，Anaconda可以在[此处下载](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)。请注意一定要下载版本号一致的文件，或者使用我整理的[百度云提取码:ac6n](https://pan.baidu.com/s/1q9aKKZgFOK3IJCkF3Cn0dA)  
+clone仓库中的代码，然后下载  
+[torch-1.7.1+cu110-cp37-cp37m-linux_x86_64.whl](https://download.pytorch.org/whl/torch_stable.html)  
+[torchaudio-0.7.2-cp37-cp37m-linux_x86_64.whl](https://download.pytorch.org/whl/torch_stable.html)  
+[torchvision-0.8.2+cu110-cp37-cp37m-linux_x86_64.whl](https://download.pytorch.org/whl/torch_stable.html)  
+[Anaconda3-5.3.0-Linux-x86_64.sh](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)  
+这四个文件放在项目根目录，目的是加快环境构建。  
+请注意一定要下载版本号一致的文件，或者使用我整理的[百度云提取码:ac6n](https://pan.baidu.com/s/1q9aKKZgFOK3IJCkF3Cn0dA)  
 文件列表如下图所示：  
 ![image](https://github.com/cctomato/FaceMaskDetect/blob/main/detect/inference/images/file.png)  
 完成所有所需文件的准备后，使用终端进入FaceMaskDetect目录，然后通过docker build命令构建pytorch环境镜像。
