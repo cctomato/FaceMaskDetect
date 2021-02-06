@@ -3,10 +3,10 @@
 
 [English](README_en.md)
 
-## 介绍 - Introduction
+## 介绍
 基于docker部署pytorch的训练和运行环境，借助yolov5检测算法实现人脸口罩的检测，并通过nvidia-cuda技术进行加速。
 
-## 用法 - Usage
+## 用法
 我是在Ubuntu 20x系统上使用。
 ### 1 安装nvidia驱动
 在ubuntu上只需要执行以下命令就可以自动安装N卡驱动。
