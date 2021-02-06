@@ -51,7 +51,7 @@ systemctl restart docker
 ### 4 构建pytorch环境
 clone仓库中的代码，然后下载torch-1.7.1+cu110-cp37-cp37m-linux_x86_64.whl、torchaudio-0.7.2-cp37-cp37m-linux_x86_64.whl
 、torchvision-0.8.2+cu110-cp37-cp37m-linux_x86_64.whl、Anaconda3-5.3.0-Linux-x86_64.sh这四个文件放在项目根目录，目的是加快环境构建。
-torch相关文件可以在[此处下载](https://download.pytorch.org/whl/torch_stable.html)，Anaconda可以在[此处下载](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)。请注意一定要下载版本号一致的文件，或者使用我整理的[百度云，提取码:ac6n](https://pan.baidu.com/s/1q9aKKZgFOK3IJCkF3Cn0dA)  
+torch相关文件可以在[此处下载](https://download.pytorch.org/whl/torch_stable.html)，Anaconda可以在[此处下载](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)。请注意一定要下载版本号一致的文件，或者使用我整理的[百度云提取码:ac6n](https://pan.baidu.com/s/1q9aKKZgFOK3IJCkF3Cn0dA)  
 文件列表如下图所示：  
 ![image](https://github.com/cctomato/FaceMaskDetect/blob/main/detect/inference/images/file.png)
 完成所有所需文件的准备后，使用终端进入FaceMaskDetect目录，然后通过docker build命令构建pytorch环境镜像。
