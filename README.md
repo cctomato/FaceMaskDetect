@@ -18,7 +18,7 @@ ubuntu-drivers autoinstall
 nvidia-smi
 ```
 驱动安装成功后就可以看到显卡相关信息
-![](/detect/inference/images/nvidia-smi.png)
+![]("https://github.com/cctomato/FaceMaskDetect/blob/main/detect/inference/images/nvidia-smi.png")
 
 ### 2 安装docker
 
