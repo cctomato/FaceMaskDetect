@@ -30,6 +30,15 @@ $ add-apt-repository "deb [arch=amd64] https://mirrors.ustc.edu.cn/docker-ce/lin
 $ apt-get update
 $ apt-get install docker-ce
 ```
+如果ubuntu驱动掉了需要删除旧驱动重新安装
+```bash
+apt-get remove --purge nvidia*
+apt-get update
+ubuntu-drivers devices
+apt install nvidia-driver-470
+reboot
+```
+
 ### 3 安装nvidia-docker
 按顺序执行以下命令即可在Ubuntu上完成nvidia-docker的安装。
 ```bash
@@ -39,6 +48,8 @@ $ curl -sL https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
 $ sudo apt-get update
 $ sudo apt-get install nvidia-docker2
 ```
+如果是第二次安装，需要将/etc/apt/sources.list.d目录下nvidia开头的文件删掉，不然无法更新apt。
+
 安装完成后使用vim编辑/etc/docker/daemon.json文件添加default-runtime设置为nvidia。
 ```
 "default-runtime":"nvidia",
